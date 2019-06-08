@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="DynamicCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-ec-d5u">
+                    <rect key="frame" x="7" y="7" width="152" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="152" id="hlm-RF-ppi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GWz-pb-kOe">
+                    <rect key="frame" x="167" y="15" width="208" height="5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="vRU-9F-hja"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="ehJ-3S-VZP">
+                        <size key="itemSize" width="15" height="5"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GWz-pb-kOe" secondAttribute="trailing" id="DAk-PK-KRJ"/>
+                <constraint firstItem="GWz-pb-kOe" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="UjV-l9-0Bj"/>
+                <constraint firstItem="iSg-ec-d5u" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XN9-9W-kLn"/>
+                <constraint firstItem="iSg-ec-d5u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="jFP-wJ-RgP"/>
+                <constraint firstItem="GWz-pb-kOe" firstAttribute="leading" secondItem="iSg-ec-d5u" secondAttribute="trailing" constant="8" id="t48-R8-FDY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="colorCollectionView" destination="GWz-pb-kOe" id="lu1-Wk-jAI"/>
+                <outlet property="nameLabel" destination="iSg-ec-d5u" id="WQR-eh-hpd"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-130.88455772113943"/>
+        </view>
+    </objects>
+</document>
